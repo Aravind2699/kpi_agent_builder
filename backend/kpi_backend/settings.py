@@ -14,22 +14,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "api",
 ]
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-    "http://127.0.0.1:3000",
-    "http://localhost:3001",
-    "http://127.0.0.1:3001",
-    "http://localhost:3002",
-    "http://0.0.0.0:3002",
-    "http://localhost:8002",
-    "http://127.0.0.1:3002",
-    "http://127.0.0.1:8002",
-]
-
-
-# CORS_ALLOW_ALL_ORIGINS cannot be used together with CORS_ALLOW_CREDENTIALS=True.
-# Browsers reject cookies sent to a wildcard origin. Use explicit origins instead.
-CORS_ALLOW_CREDENTIALS = True
+CORS_ALLOW_ALL_ORIGINS = True
 
 CORS_ALLOW_METHODS = [
     'GET',
@@ -41,8 +26,15 @@ CORS_ALLOW_METHODS = [
 ]
 
 CORS_ALLOW_HEADERS = [
-    'content-type',
+    'accept',
+    'accept-encoding',
     'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
     'x-internal-token',
 ]
 
